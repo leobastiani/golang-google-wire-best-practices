@@ -8,7 +8,7 @@ import (
 	"github.com/leobastiani/golang-google-wire-best-practices/src"
 )
 
-func Init(mt src.Timer) *src.App {
+func Init(options src.Options) *src.App {
 	wire.Build(src.AppSet)
 	return nil
 }
