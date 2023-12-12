@@ -22,4 +22,4 @@ go.work
 
 /vendor
 /bin
-/wire_gen.go
+wire_gen.go
