@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+
+/vendor
+/bin
+/wire_gen.go
