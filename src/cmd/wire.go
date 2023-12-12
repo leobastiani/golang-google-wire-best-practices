@@ -7,23 +7,23 @@ import (
 	"github.com/google/wire"
 )
 
-// initApp returns a real app.
-func initApp() *app {
-	wire.Build(appSet)
+// InitApp returns a real app.
+func InitApp() *App {
+	wire.Build(AppSet)
 	return nil
 }
 
-// initMockedAppFromArgs returns an app with mocked dependencies provided via
+// InitMockedAppFromArgs returns an app with mocked dependencies provided via
 // arguments (Approach A). Note that the argument's type is the interface
 // type (timer), but the concrete mock type should be passed.
-func initMockedAppFromArgs(mt timer) *app {
-	wire.Build(appSetWithoutMocks)
+func InitMockedAppFromArgs(mt Timer) *App {
+	wire.Build(AppSetWithoutMocks)
 	return nil
 }
 
-// initMockedApp returns an app with its mocked dependencies, created
+// InitMockedApp returns an app with its mocked dependencies, created
 // via providers (Approach B).
-func initMockedApp() *appWithMocks {
-	wire.Build(mockAppSet)
+func InitMockedApp() *AppWithMocks {
+	wire.Build(MockAppSet)
 	return nil
 }
