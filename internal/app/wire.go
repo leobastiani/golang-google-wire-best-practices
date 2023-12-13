@@ -1,11 +1,11 @@
 //go:build wireinject
 // +build wireinject
 
-package main
+package app
 
 import (
 	"github.com/google/wire"
-	"github.com/leobastiani/golang-google-wire-best-practices/src"
+	"github.com/leobastiani/golang-google-wire-best-practices/internal/src"
 )
 
 func Init(options src.Options) *src.App {
